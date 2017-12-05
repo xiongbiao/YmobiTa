@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">YmobiTa</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+
+    <string name="star_title">Thank you for your support!</string>
+    <string name="star_msg">Please give us a 5 star rating, thank you!</string>
+
+    <string name="share_title">Thank you for your support!</string>
+    <string name="share_msg">Good things will be shared with good friends, thank you!</string>
+
+</resources>
