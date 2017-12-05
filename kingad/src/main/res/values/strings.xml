@@ -1,0 +1,10 @@
+<resources>
+
+
+    <string name="star_title">Thank you for your support!</string>
+    <string name="star_msg">Please give us a 5 star rating, thank you!</string>
+
+    <string name="share_title">Thank you for your support!</string>
+    <string name="share_msg">Good things will be shared with good friends, thank you!</string>
+
+</resources>
