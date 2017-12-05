@@ -89,7 +89,7 @@ public class AUtil {
 
 
 
-    public void showInterstitial(Context context,int interval){
+    public static void showInterstitial(Context context,int interval){
         long showtime = PreferencesUtils.getLong(context,"showtime");
         long ntime = System.currentTimeMillis();
 
@@ -107,11 +107,11 @@ public class AUtil {
         }
     }
 
-    public void showInterstitial(Context context){
+    public static void showInterstitial(Context context){
         showInterstitial(context,0);
     }
 
-    public void showInterstitialByAuditing(Context context){
+    public static void showInterstitialByAuditing(Context context){
         if(isOk()) showInterstitial(context,0);
     }
 
