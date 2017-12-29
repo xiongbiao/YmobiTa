@@ -97,6 +97,7 @@ public class AUtil {
             PreferencesUtils.putLong(context,"showtime",ntime);
             showtime = ntime ;
         }
+
         if(ntime-showtime>1000*interval){
             if((int)ntime%2==1){
                 AdUtil.addInterstitialAd(context);
