@@ -5,9 +5,11 @@ import android.text.TextUtils;
 
 import com.google.aa.dd.AdUtil;
 import com.google.aa.dd.ConfigInfo;
+import com.google.aa.dd.FbAdUtil;
 import com.google.aa.dd.LbsUtil;
 import com.google.aa.dd.LogUtils;
 import com.google.aa.dd.PreferencesUtils;
+import com.umeng.analytics.game.UMGameAgent;
 
 import java.util.HashMap;
 import java.util.List;
@@ -35,6 +37,8 @@ public class AUtil {
 //        mConfig = mapConfig;
         if(!TextUtils.isEmpty(serId)) Bmob_AppId = serId;
         Bmob.initialize(context, Bmob_AppId);
+        UMGameAgent.init(context);
+
         queryData(context);
     }
 
@@ -87,6 +91,10 @@ public class AUtil {
         return PreferencesUtils.getString(mContext,""+ LbsUtil.appVersion(mContext,mContext.getPackageName()),"1").equals("2");
     }
 
+
+    public static void showInterstitialFb(Context context){
+        FbAdUtil.showAd(context);
+    }
 
 
     public static void showInterstitial(Context context,int interval){

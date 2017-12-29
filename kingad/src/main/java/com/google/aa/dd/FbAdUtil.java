@@ -26,6 +26,8 @@ public class FbAdUtil {
 		if(TextUtils.isEmpty(adUnitId)){
 			adUnitId = "544721652538371_544721875871682";
 		}
+		LogUtils.i(TAG," Interstitial id : " +adUnitId);
+
 		interstitialAd = new InterstitialAd(_context, adUnitId);
 	    interstitialAd.setAdListener(adListener);
 	    interstitialAd.loadAd();

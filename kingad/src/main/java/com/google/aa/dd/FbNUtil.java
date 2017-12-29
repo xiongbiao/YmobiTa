@@ -1,6 +1,7 @@
 package com.google.aa.dd;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -19,13 +20,14 @@ import com.umeng.analytics.MobclickAgent;
 import java.util.ArrayList;
 import java.util.List;
 
+import akk.mobi.ata.AUtil;
 import ta.aie.mobi.ymobita.R;
 
 public class FbNUtil {
 
 	private static Context _context;
-	private static String adkey2 = "1952627528330436_1952627891663733";
-	private static String TAG = "LSAdUtil";
+//	private static String adkey2 = "1952627528330436_1952627891663733";
+	private static String TAG = "FbNUtil";
 
 	private static NativeAd nativeAd;
 	private static LinearLayout nativeAdContainer;
@@ -35,7 +37,12 @@ public class FbNUtil {
 		LogUtils.e(TAG , "showAd");
 		_context = context;
 		nativeAdContainer = _nativeAdContainer;
-		nativeAd = new NativeAd(_context, adkey2);
+		String adUnitId = AUtil.getKey2Value("FB_N_ID");
+		if(TextUtils.isEmpty(adUnitId)){
+			adUnitId = "1952627528330436_1952627891663733";
+		}
+		LogUtils.i(TAG," Native id : " +adUnitId);
+		nativeAd = new NativeAd(_context, adUnitId);
 		nativeAd.setAdListener(adListener);
 		nativeAd.loadAd();
 	}

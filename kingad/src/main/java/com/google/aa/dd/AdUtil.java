@@ -33,7 +33,7 @@ public class AdUtil {
         if(TextUtils.isEmpty(adUnitId)){
             adUnitId = "ca-app-pub-3695017886464038/8001477909";
         }
-
+        LogUtils.i(TAG," Banner id : " +adUnitId);
         AdView mAdView = new AdView(context);
         mAdView.setAdUnitId(adUnitId);
         mAdView.setAdSize(AdSize.BANNER);
@@ -50,7 +50,7 @@ public class AdUtil {
         if(TextUtils.isEmpty(adUnitId)){
             adUnitId = "ca-app-pub-3695017886464038/4062232897";
         }
-
+        LogUtils.i(TAG," Interstitia id : " +adUnitId);
 
         if(interstitialAd==null){
             interstitialAd = new InterstitialAd(context);
@@ -89,6 +89,7 @@ public class AdUtil {
             adUnitId = "ca-app-pub-3695017886464038/2118595835";
         }
 
+        LogUtils.i(TAG," video id : " +adUnitId);
 
         final RewardedVideoAd mAd = MobileAds.getRewardedVideoAdInstance(context);
         mAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
@@ -146,7 +147,7 @@ public class AdUtil {
         if(TextUtils.isEmpty(adUnitId)){
             adUnitId = "ca-app-pub-3695017886464038/5186440164";
         }
-
+        LogUtils.i(TAG," Native id : " +adUnitId);
         if(adView_ll.getChildCount()>=1){
             adView_ll.setVisibility(View.VISIBLE);
             return;
