@@ -11,8 +11,6 @@ import cn.bmob.v3.BmobObject;
  */
 public class ConfigInfo extends BmobObject implements Serializable {
 
-
-
     public String pname = "";
     public String key = "";
     public String value = "";
