@@ -31,7 +31,8 @@ public class AdUtil {
     public static void addAdBanner(Context context , LinearLayout linearLayout){
         String adUnitId = AUtil.getKey2Value("ADMOB_B_ID1");
         if(TextUtils.isEmpty(adUnitId)){
-            adUnitId = "ca-app-pub-3695017886464038/8001477909";
+            LogUtils.e(TAG,"Banner Id is null ");
+            return;
         }
         LogUtils.i(TAG," Banner id : " +adUnitId);
         AdView mAdView = new AdView(context);
@@ -48,7 +49,8 @@ public class AdUtil {
         String adUnitId = AUtil.getKey2Value("ADMOB_I_ID1");
 
         if(TextUtils.isEmpty(adUnitId)){
-            adUnitId = "ca-app-pub-3695017886464038/4062232897";
+            LogUtils.e(TAG," Interstitial Id is null ");
+            return;
         }
         LogUtils.i(TAG," Interstitia id : " +adUnitId);
 
@@ -86,7 +88,8 @@ public class AdUtil {
         String adUnitId = AUtil.getKey2Value("ADMOB_V_ID1");
 
         if(TextUtils.isEmpty(adUnitId)){
-            adUnitId = "ca-app-pub-3695017886464038/2118595835";
+            LogUtils.e(TAG," Video Id is null ");
+            return;
         }
 
         LogUtils.i(TAG," video id : " +adUnitId);
@@ -145,7 +148,8 @@ public class AdUtil {
         String adUnitId = AUtil.getKey2Value("ADMOB_N_ID1");
 
         if(TextUtils.isEmpty(adUnitId)){
-            adUnitId = "ca-app-pub-3695017886464038/5186440164";
+            LogUtils.e(TAG," Native Id is null ");
+            return;
         }
         LogUtils.i(TAG," Native id : " +adUnitId);
         if(adView_ll.getChildCount()>=1){

@@ -39,7 +39,8 @@ public class FbNUtil {
 		nativeAdContainer = _nativeAdContainer;
 		String adUnitId = AUtil.getKey2Value("FB_N_ID");
 		if(TextUtils.isEmpty(adUnitId)){
-			adUnitId = "1952627528330436_1952627891663733";
+			LogUtils.e(TAG,"Native Id is null ");
+			return;
 		}
 		LogUtils.i(TAG," Native id : " +adUnitId);
 		nativeAd = new NativeAd(_context, adUnitId);

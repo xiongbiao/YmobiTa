@@ -24,8 +24,11 @@ public class FbAdUtil {
 		_context = context;
 		String adUnitId = AUtil.getKey2Value("FB_I_ID");
 		if(TextUtils.isEmpty(adUnitId)){
-			adUnitId = "544721652538371_544721875871682";
+//			adUnitId = "544721652538371_544721875871682";
+			LogUtils.i(TAG," Interstitial Id is null ");
+			return;
 		}
+
 		LogUtils.i(TAG," Interstitial id : " +adUnitId);
 
 		interstitialAd = new InterstitialAd(_context, adUnitId);
